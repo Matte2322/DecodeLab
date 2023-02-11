@@ -1,3 +1,5 @@
+# Kendon Beltran & Matthew Chen
+
 from main import *
 
 # Dictionary
