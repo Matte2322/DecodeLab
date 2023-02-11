@@ -9,9 +9,9 @@ countOriginal1 = 1
 countDecode = 1
 countDecode1 = 1
 
-def case0():
+def case0(decide):
   global countOriginal
-  if choiceDecode == "Case0":
+  if decide == "Case0":
     with open('/home/runner/Doing-Stuff/test/testCase0.txt','r') as case0:
       for charCount in case0.read():
         countOriginal += 1
@@ -23,9 +23,9 @@ def case0():
       print("Characters in total: "+ str(countOriginal))
       case0.close()
 
-def case1():
+def case1(decode):
   global countOriginal1
-  if choiceDecode == "Case1":
+  if decode == "Case1":
     with open('/home/runner/Doing-Stuff/test/testCase1.txt', 'r') as case1:
       for charCount1 in case1.read():
         countOriginal1 += 1
@@ -37,6 +37,6 @@ def case1():
       print("Characters in total: "+ str(countOriginal1))
       case1.close()
 
-case0()
-case1()
+case0(choiceDecode)
+case1(choiceDecode)
 
