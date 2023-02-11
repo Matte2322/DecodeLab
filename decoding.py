@@ -13,7 +13,7 @@ replacement = {
   '#': 'these',
 }
 
-def decodingSymbols():
+def decodingSymbols(decide):
   global countOriginal
   global countOriginal1
   global choiceDecode
@@ -21,7 +21,7 @@ def decodingSymbols():
   global countDecode1
   
   lines = []
-  if choiceDecode == "Case0":
+  if decide == "Case0":
     with open('/home/runner/Doing-Stuff/test/testCase0.txt', 'r') as decodeCase0:
       for line in decodeCase0:
         for original, translate in replacement.items():
@@ -43,7 +43,7 @@ def decodingSymbols():
       print()
       print(f'Character count after decode: {countDecode}')
       
-  elif choiceDecode == "Case1":
+  elif decide == "Case1":
     with open('/home/runner/Doing-Stuff/test/testCase1.txt', 'r') as decodeCase1:
       for line in decodeCase1:
         for original, translate in replacement.items():
@@ -65,4 +65,4 @@ def decodingSymbols():
       print()
       print(f'Character count after decode: {countDecode1}')
     
-decodingSymbols() 
+decodingSymbols(choiceDecode) 
